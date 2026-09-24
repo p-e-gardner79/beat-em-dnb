@@ -1,0 +1,94 @@
+{
+  "punch-swing": {
+    "source": "Quick,_tight_fist_sw_#2-1790179749293.wav",
+    "file": "punch-swing.wav"
+  },
+  "punch-hit": {
+    "source": "Meaty_and_deep_thud;_#1-1790179811901.wav",
+    "file": "punch-hit.wav"
+  },
+  "kick-swing": {
+    "source": "Powerful_leg_swoosh;_#2-1790179845332.wav",
+    "file": "kick-swing.wav"
+  },
+  "kick-hit": {
+    "source": "Heavy_arcade_kick_im_#3-1790179889004.wav",
+    "file": "kick-hit.wav"
+  },
+  "phone-swing": {
+    "source": "Heavy_plastic_brick__#3-1790179916951.wav",
+    "file": "phone-swing.wav"
+  },
+  "phone-hit": {
+    "source": "Chunky_1995_plastic__#2-1790179970301.wav",
+    "file": "phone-hit.wav"
+  },
+  "case-swing": {
+    "source": "Heavy_rigid_briefcas_#3-1790180002125.wav",
+    "file": "case-swing.wav"
+  },
+  "case-hit": {
+    "source": "Hard_briefcase_strik_#3-1790180029795.wav",
+    "file": "case-hit.wav"
+  },
+  "player-effort": {
+    "source": "Adult_male_fighter_m_#4-1790180056754.wav",
+    "file": "player-effort.wav"
+  },
+  "enemy-effort": {
+    "source": "Adult_male_fighter_m_#1-1790180103687.wav",
+    "file": "enemy-effort.wav"
+  },
+  "player-hurt": {
+    "source": "Adult_male_fighter_g_#3-1790180132766.wav",
+    "file": "player-hurt.wav"
+  },
+  "enemy-hurt": {
+    "source": "Adult_male_giving_a__#1-1790180168641.wav",
+    "file": "enemy-hurt.wav"
+  },
+  "body-fall": {
+    "source": "Adult_body_falling_o_#1-1790180201430.wav",
+    "file": "body-fall.wav"
+  },
+  "player-ko": {
+    "source": "Low_male_knockout_gr_#3-1790180229920.wav",
+    "file": "player-ko.wav"
+  },
+  "enemy-ko": {
+    "source": "Strained_male_knocko_#1-1790180254302.wav",
+    "file": "enemy-ko.wav"
+  },
+  "player-step": {
+    "source": "One_rubber-soled_hig_#2-1790180287358.wav",
+    "file": "player-step.wav"
+  },
+  "enemy-step": {
+    "source": "One_hard-soled_busin_#3-1790180310674.wav",
+    "file": "enemy-step.wav"
+  },
+  "jump": {
+    "source": "Quick_shoe_push-off__#2-1790180332881.wav",
+    "file": "jump.wav"
+  },
+  "land": {
+    "source": "Two_trainers_landing_#2-1790180365355.wav",
+    "file": "land.wav"
+  },
+  "charge": {
+    "source": "Short_rising_electro_#4-1790180399764.wav",
+    "file": "charge.wav"
+  },
+  "slam": {
+    "source": "Fist_slamming_into_t_#2-1790180430290.wav",
+    "file": "slam.wav"
+  },
+  "burst": {
+    "source": "Expanding_electronic_#3-1790180462266.wav",
+    "file": "burst.wav"
+  },
+  "music": {
+    "source": "Steel_Grate_Ambush.mp3",
+    "file": "steel-grate-ambush.mp3"
+  }
+}

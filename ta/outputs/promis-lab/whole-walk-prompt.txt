@@ -1,0 +1,10 @@
+Built-in image_gen: replacement complete-sprite walking artwork.
+
+Use reference image as the exact pixel-art character design. Draw a 2x2 sprite sheet of FOUR FULL-BODY poses for a proper looping walk, stocky adult man in olive bomber with orange zip, black anchor T-shirt, backwards cap, dark jeans, white shoes. All faces and torsos face RIGHT. Same squat stocky proportions as original, not taller/thinner. Preserve late-80s arcade pixel clusters. Flat solid neon magenta #ff00ff background everywhere. No shadows, no effects or text. 1024x1024, each sprite centered in its 512x512 cell, feet baseline 470, head top 60, same scale.
+TOP LEFT = wide stride: NEAR leg forward RIGHT, FAR leg behind LEFT.
+TOP RIGHT = passing: NEAR leg straight planted below hips, FAR knee lifted forward right with bent knee and raised foot. Feet close together.
+BOTTOM LEFT = reverse wide stride: NEAR leg behind LEFT, FAR leg forward RIGHT. CRITICAL the near thigh runs DOWN-LEFT and overlaps the far thigh which runs DOWN-RIGHT. The far/front leg is partially occluded at its upper thigh. This is NOT the same pose as top left. Near hand swings FORWARD right, far hand swings BACK left to counterbalance.
+BOTTOM RIGHT = opposite passing: FAR leg planted straight below hips, NEAR knee lifted forward right and shoe raised, near thigh overlaps far thigh. Feet close together.
+Arms swing opposite legs, modest natural posture. Four distinct anatomically correct poses. Do not rotate any body part independently or show seams. No skating or squatting. Keep original face, jacket, proportions, pixel art and shoes.
+
+Follow-up refinement lowered raised knees in the passing poses, requested reversed near/far legs in the bottom-left stride, and preserved the upper bodies and transparency. Final artwork: walk-frames.png. The four full frames are used directly; no limb rig is used. Generated leg alternation remains approximate.

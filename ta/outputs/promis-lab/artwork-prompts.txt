@@ -1,0 +1,13 @@
+Tool: built-in image_gen (two calls).
+
+Initial atlas prompt:
+Use case: identity-preserve. Asset type: production sprite atlas for a playable late 1980s/early 1990s beat-em-up.
+Reference image 1 establishes exact character and pixel art rendering; reference image 2 establishes ground-slam special. Preserve recognizable face, stocky proportions, backwards black cap, olive green bomber jacket orange zip, black anchor T-shirt, blue jeans and pale high-top trainers. Make a SINGLE sprite sheet on genuinely transparent background. No text, no labels, no grid lines, no ground shadows. Exactly 6 columns and 4 rows of equal cells (24 sprites) in a 1536x1024 image. Each cell 256x256. Every character faces RIGHT. Feet baseline at 240 pixels into each cell; center of hips at x=128. Standing character approximately 208 pixels tall. Entire character including extended limbs stays within its cell with margin. Same character scale, palette, anatomy and rendering in every cell. Hard pixel edges and compact shaded clusters as reference, not smooth vector or 3D. No scanlines baked in (game adds them).
+ROW 1: six walking frames, coherent full stride cycle, arms and legs alternate, beginning with standing guard, followed by stride contact, passing, opposite contact, passing, guard.
+ROW 2: six punch frames: guard, fist pulled back anticipation, shoulder rotation, full rightward horizontal punch extension, partial retract, guard. Punch reaches right, face remains same.
+ROW 3: six high side kick frames: guard, knee raised, partial kick extension, full rightward high kick matching reference, retraction bent knee, guard.
+ROW 4: six special frames: right fist raised wind-up, crouched charge with subtle cyan fist glow, deeper crouch, right fist striking ground, held ground slam, rising recovery.
+Aim for near-identical reference graphics. Only the character; no enemies, props, environment, effects rings, borders, or words. Transparent empty space between all sprites.
+
+Correction prompt:
+Edit this sprite atlas. Preserve exactly all 24 character sprites, the precise six-column four-row layout, cell size, pixel rendering, color palette, faces, clothes and poses. Change ONLY the entire background to perfectly flat solid vivid magenta RGB 255,0,255 (#ff00ff), including every gap around arms/legs. Remove all background glow, shadows, gradient and texture. Crisp sprite edges. No shadows beneath feet. One additional correction: horizontally mirror ONLY sprite in row 3 column 4 (the full extended high kick), so he kicks toward the RIGHT like every other sprite. Keep all other sprites in exact existing position. Output 1536x1024.

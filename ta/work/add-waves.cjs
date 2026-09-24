@@ -1,0 +1,24 @@
+const fs=require('fs');let s=fs.readFileSync('work/combat-engine-before-waves.js','utf8');
+s=s.replace('this.god=false','this.god=true');
+s=s.replace("make(id,x,face){return {id,x", "get enemy(){return this.enemies.find(e=>e.hp>0)||this.enemies[0]}\n spawnWave(){const n=Math.min(this.wave,3);this.enemies=Array.from({length:n},(_,i)=>{const x=this.wave===1?665:i%2?-50:1010;const e=this.make('enemy',x,x<480?1:-1);e.uid=this.wave+'-'+i;e.y=this.wave===1?367:[335,397,365][i];e.entering=this.wave>1;e.cooldown=1.5+i*.6;return e});this.waveDelay=null;this.nextAttack=this.clock+1;this.message='WAVE '+this.wave+' · '+n+' '+(n===1?'bully':'bullies')}\n make(id,x,face){return {id,uid:id,distance:0,hitTargets:new Set(),x");
+const r0=s.indexOf(' reset(){'),r1=s.indexOf('\n set(',r0);
+s=s.slice(0,r0)+` reset(){this.player=this.make('player',300,1);this.events=[];this.queue=null;this.over=false;this.clock=0;this.wave=1;this.kills=0;this.hits={player:0,enemy:0};this.inspect=null;this.spawnWave()}\n`+s.slice(r1);
+s=s.replace('a.serial++}',"a.serial++;a.hitTargets=new Set();if(MOVES[action]||action==='jump')this.events.push({type:'action',weapon:action,who:a.id,x:a.x})}");
+s=s.replace('if(a.hit||!this.inRange(a,b))','if(a.hitTargets.has(b.uid)||!this.inRange(a,b))').replace('a.hit=true;const damage','a.hit=true;a.hitTargets.add(b.uid);const weapon=a.action;const damage');
+s=s.replace("big:m.knockdown,who:b.id","big:m.knockdown||b.hp===0,who:b.id,weapon,ko:b.hp===0");
+const ko="if(b.hp===0){this.over=true;this.message=(b.id==='enemy'?'CORPORATE BULLY DOWN':'PROMIS DOWN')+' — R to reset';this.events.push({type:'ko'})}";
+s=s.replace(ko,"if(b.hp===0){if(b.id==='enemy')this.kills++;else{this.over=true;this.message='PROMIS DOWN — R to reset'}this.events.push({type:'ko',who:b.id,x:b.x})}");
+s=s.replace('a.x=Math.max(135,Math.min(825,a.x+dx/n*speed*dt))','a.x=Math.max(a.entering?-65:135,Math.min(a.entering?1025:825,a.x+dx/n*speed*dt))');
+s=s.replace("a.time=(a.time+distance/145)%.72", "const before=Math.floor(a.distance/52);a.distance+=distance;if(Math.floor(a.distance/52)>before)this.events.push({type:'step',who:a.id,x:a.x});a.time=(a.time+distance/145)%.72");
+s=s.replace('for(const a of [p,e])','for(const a of [p,...this.enemies])'); // first occurrence below too
+s=s.replace('a.x=Math.max(135,Math.min(825,a.x+a.vx*dt))','a.x=Math.max(a.entering?-65:135,Math.min(a.entering?1025:825,a.x+a.vx*dt))');
+const ai0=s.indexOf(" if(['idle','walk'].includes(e.action))"),ai1=s.indexOf('\n for(const [a,b]',ai0);
+let ai=s.slice(ai0,ai1);ai=ai.replace("if(['idle','walk'].includes(e.action))", "for(const e of this.enemies){if(e.hp<=0)continue;if(e.entering&&e.x>=135&&e.x<=825)e.entering=false;if(['idle','walk'].includes(e.action))");
+ai=ai.replace("if(this.enemyMode!=='target')","if(this.enemyMode!=='target'||e.entering)").replace('this.settings.aggression>0','this.settings.aggression>0&&this.clock>=this.nextAttack').replace("this.set(e,e.chain++%2?'case':'phone');", "this.set(e,e.chain++%2?'case':'phone');this.nextAttack=this.clock+1.05/this.settings.tempo;");ai+='}';s=s.slice(0,ai0)+ai+s.slice(ai1);
+const a0=s.indexOf(' for(const [a,b]'),a1=s.indexOf('\n // Prevent',a0);
+s=s.slice(0,a0)+` for(const a of [p,...this.enemies]){const m=MOVES[a.action];if(!m)continue;if(a.time>=m.start&&!a.impact){a.impact=true;this.events.push({type:a.action==='special'?'shockwave':'swing',x:a.x+a.face*35,y:a.y,weapon:a.action,who:a.id})}if(a.time>=m.start&&a.time<=m.end)for(const b of a===p?this.enemies:[p]){this.hit(a,b);if(this.over)break}}`+s.slice(a1);
+s=s.replace(" if(Math.abs(p.y-e.y)"," for(const e of this.enemies){if(Math.abs(p.y-e.y)");
+s=s.replace('e.x-sign*overlap/2))}\n }','e.x-sign*overlap/2))}}\n }');
+s=s.replace('for(const a of [p,e])','for(const a of [p,...this.enemies])');s=s.replace("}else{this.set(a,'idle');if(a===e)","}else{if(a.action==='jump')this.events.push({type:'land',who:a.id,x:a.x});this.set(a,'idle');if(a.id==='enemy')");
+const end=s.lastIndexOf('\n }\n}');s=s.slice(0,end)+`\n if(!this.over&&this.enemies.every(e=>e.hp===0)){if(this.waveDelay===null){this.waveDelay=2.2;this.message='WAVE '+this.wave+' CLEAR · next group incoming'}else{this.waveDelay-=dt;if(this.waveDelay<=0){this.wave++;this.spawnWave()}}}\n`+s.slice(end);
+fs.writeFileSync('work/combat-engine.js',s);

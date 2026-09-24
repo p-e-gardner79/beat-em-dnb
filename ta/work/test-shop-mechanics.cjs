@@ -1,0 +1,9 @@
+const assert=require('node:assert/strict');
+const {CombatLab}=require('./combat-engine.js');
+function setup(){const l=new CombatLab();l.enemyMode='target';l.vinyl=[];l.enemy.x=l.player.x+100;return l}
+let l=setup();l.trigger('jump');l.update(.35);assert(l.height(l.player)>85);assert.equal(l.enemy.hp,100);assert(!l.events.some(e=>e.type==='swing'||e.type==='hit'));assert(!l.trigger('jump'));l.update(.37);assert.equal(l.player.flight,null);assert.equal(l.player.action,'idle');assert.equal(l.events.filter(e=>e.type==='land').length,1);
+for(const attack of ['punch','kick']){l=setup();l.trigger('jump');l.update(.1);const height=l.height(l.player),flight=l.player.flight;assert(l.trigger(attack));assert.equal(l.player.flight,flight);assert.equal(l.height(l.player),height);assert(!l.trigger('special'));assert(!l.trigger(attack));l.update(.35,{dx:1});assert(l.enemy.hp<100,attack+' hits in air');assert(l.player.x>300);assert(l.player.flight!==null);assert.equal(l.events.filter(e=>e.type==='swing').length,1);l.update(.27);assert.equal(l.player.flight,null);assert.equal(l.player.action,'idle');assert.equal(l.events.filter(e=>e.type==='land').length,1)}
+l=setup();let hands=[];for(let i=0;i<4;i++){l.trigger('punch');hands.push(l.player.hand);l.update(.41)}assert.deepEqual(hands,[0,1,0,1]);
+l=setup();l.trigger('punch');l.trigger('punch');l.update(.41);assert.equal(l.player.hand,1);assert.equal(l.player.action,'punch');
+l=setup();l.trigger('jump');l.update(.65);l.trigger('kick');l.update(.08);assert.equal(l.player.action,'idle');assert.equal(l.player.flight,null);assert(!l.events.some(e=>e.type==='hit'),'landing cancels a late attack before its hit frame');
+console.log('PASS: neutral jump, explicit aerial punch/kick, fixed flight duration, aerial movement, no repeat air attacks, late attack landing cancellation, alternating fists and queued combo.');

@@ -1,0 +1,1 @@
+const fs=require('fs');let s=fs.readFileSync('work/enemy-loader.js','utf8');s=s.replace('y0=Math.floor(row*ch),y1=Math.floor((row+1)*ch)','y0=Math.floor([0,.345,.682][row]*c.height),y1=Math.floor([.345,.682,1][row]*c.height)').replace('col===1)x1+=12','col===1)x1+=32').replace('col===2)x0+=12','col===2)x0+=32');fs.writeFileSync('work/enemy-loader.js',s);
