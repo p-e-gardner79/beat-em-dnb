@@ -11,7 +11,7 @@ const DEFAULTS={playerSpeed:145,enemySpeed:90,tempo:1,aggression:.65,reach:1,dam
 class CombatLab{
  constructor(){this.character='promis';this.settings={...DEFAULTS};this.enemyMode='fight';this.god=true;this.reset()}
  selectCharacter(name){if(!['promis','em','bully','change'].includes(name))return false;this.character=name;this.reset();return true}
- get playerName(){return this.character==='change'?'DJ Change':this.character==='bully'?'DJ Bully':this.character==='em'?'DJ Em':'Promis'}
+ get playerName(){return this.character==='change'?'DJ Change':this.character==='bully'?'DJ Bully':this.character==='em'?'DJ Em':'DJ Promis'}
  get enemy(){return this.enemies.find(e=>e.hp>0)||this.enemies[0]}
  spawnWave(){const n=Math.min(this.wave,3);this.enemies=Array.from({length:n},(_,i)=>{const x=this.wave===1?665:i%2?-50:1010;const e=this.make('enemy',x,x<480?1:-1);e.uid=this.wave+'-'+i;e.y=this.wave===1?367:[335,397,365][i];e.entering=this.wave>1;e.cooldown=1.5+i*.6;return e});this.waveDelay=null;this.nextAttack=this.clock+1;this.message='WAVE '+this.wave+' · '+n+' '+(n===1?'bully':'bullies')}
  make(id,x,face){return {id,uid:id,flight:null,airAttack:false,fighter:id==='player'?this.character:null,kickCount:0,kickVariant:0,punchCount:0,hand:0,distance:0,hitTargets:new Set(),x,y:367,face,action:'idle',time:0,hp:100,vx:0,invuln:0,cooldown:id==='enemy'?1.5:0,hit:false,impact:false,serial:0,chain:0}}
