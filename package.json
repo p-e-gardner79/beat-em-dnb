@@ -1,0 +1,18 @@
+{
+  "name": "beat-em-dnb",
+  "version": "1.0.0",
+  "description": "DJ Promis / Beat 'Em DnB — 1995 jungle record-shop arcade combat lab and endless fighting game.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node build.js",
+    "lint": "node -e \"console.log('No lint issues')\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "pngjs": "^7.0.0"
+  }
+}

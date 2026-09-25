@@ -1,0 +1,8 @@
+{
+  "name": "beat-em-dnb",
+  "description": "DJ Promis / Beat 'Em DnB — 1995 jungle record-shop arcade combat lab and endless fighting game.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
