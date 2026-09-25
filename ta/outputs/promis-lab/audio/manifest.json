@@ -90,5 +90,153 @@
   "music": {
     "source": "Steel_Grate_Ambush.mp3",
     "file": "steel-grate-ambush.mp3"
+  },
+  "intro-engine": {
+    "source": "Engine_rev_and_appro_#1-1790337024090.wav",
+    "file": "intro-engine.wav"
+  },
+  "intro-skid": {
+    "source": "Long_aggressive_skid_#3-1790337079877.wav",
+    "file": "intro-skid.wav"
+  },
+  "intro-door": {
+    "source": "Car_door,_Solid_open_#4-1790337125088.wav",
+    "file": "intro-door.wav"
+  },
+  "intro-breach": {
+    "source": "Shop_door_breach,_Sh_#1-1790337194517.wav",
+    "file": "intro-breach.wav"
+  },
+  "record-search": {
+    "source": "Record_search,_Hands_#3-1790337233107.wav",
+    "file": "record-search.wav"
+  },
+  "record-found": {
+    "source": "Dubplate_discovery,__#4-1790337313094.wav",
+    "file": "record-found.wav"
+  },
+  "corporate-laugh": {
+    "source": "Corporate_laugh,_Sho_#1-1790337393073.wav",
+    "file": "corporate-laugh.wav"
+  },
+  "escape-step": {
+    "source": "Escape_footsteps,_In_#1-1790337473959.wav",
+    "file": "escape-step.wav"
+  },
+  "corporate-voice": {
+    "source": "ElevenLabs_2026-09-25T12_02_04_Cockney, sinister voice_gen_sp100_s50_sb75_v3.mp3",
+    "file": "corporate-voice.mp3"
+  },
+  "mc-voice": {
+    "source": "ElevenLabs_2026-09-25T12_10_55_DNB V3_gen_sp100_s50_sb75_v3.mp3",
+    "file": "mc-voice.mp3"
+  },
+  "mc-qc-behind-ya": {
+    "source": "behind-ya.mp3",
+    "file": "mc-qc-behind-ya.mp3"
+  },
+  "mc-qc-watch-your-back-selecta": {
+    "source": "watch-your-back-selecta.mp3",
+    "file": "mc-qc-watch-your-back-selecta.mp3"
+  },
+  "mc-qc-oi-other-shoulder": {
+    "source": "Oi-other-shoulder.mp3",
+    "file": "mc-qc-oi-other-shoulder.mp3"
+  },
+  "mc-qc-they-are-sneaking-up": {
+    "source": "they-are-sneaking-up.mp3",
+    "file": "mc-qc-they-are-sneaking-up.mp3"
+  },
+  "mc-qc-find-some-space": {
+    "source": "Find-some-space.mp3",
+    "file": "mc-qc-find-some-space.mp3"
+  },
+  "mc-qc-dont-let-em-box-you-in": {
+    "source": "Dont-let-em-box-you-in.mp3",
+    "file": "mc-qc-dont-let-em-box-you-in.mp3"
+  },
+  "mc-qc-work-your-way-out": {
+    "source": "Work-your-way-out.mp3",
+    "file": "mc-qc-work-your-way-out.mp3"
+  },
+  "mc-qc-solid": {
+    "source": "Solid.mp3",
+    "file": "mc-qc-solid.mp3"
+  },
+  "mc-qc-what-a-connection": {
+    "source": "What-a-connection.mp3",
+    "file": "mc-qc-what-a-connection.mp3"
+  },
+  "mc-qc-that-one-landed": {
+    "source": "That-one-landed.mp3",
+    "file": "mc-qc-that-one-landed.mp3"
+  },
+  "mc-qc-heavy-business": {
+    "source": "Heavy-business.mp3",
+    "file": "mc-qc-heavy-business.mp3"
+  },
+  "mc-qc-keep-it-rollin": {
+    "source": "Keep-it-rollin.mp3",
+    "file": "mc-qc-keep-it-rollin.mp3"
+  },
+  "mc-qc-thats-the-rythm": {
+    "source": "Thats-the-rythm.mp3",
+    "file": "mc-qc-thats-the-rythm.mp3"
+  },
+  "mc-qc-straight-into-the-next": {
+    "source": "Straight-into-the-next.mp3",
+    "file": "mc-qc-straight-into-the-next.mp3"
+  },
+  "mc-qc-mind-the-records": {
+    "source": "Mind-the-records.mp3",
+    "file": "mc-qc-mind-the-records.mp3"
+  },
+  "mc-qc-take-a-seat-sunshine": {
+    "source": "Take-a-seat-sunshine.mp3",
+    "file": "mc-qc-take-a-seat-sunshine.mp3"
+  },
+  "mc-qc-your-special-is-ready": {
+    "source": "Your-special-is-ready.mp3",
+    "file": "mc-qc-your-special-is-ready.mp3"
+  },
+  "mc-qc-full-charge-make-it-count": {
+    "source": "Full-charge-make-it-count.mp3",
+    "file": "mc-qc-full-charge-make-it-count.mp3"
+  },
+  "mc-qc-ready-to-drop-the-bass": {
+    "source": "Ready-to-drop-the-bass.mp3",
+    "file": "mc-qc-ready-to-drop-the-bass.mp3"
+  },
+  "mc-qc-absolute-pressure": {
+    "source": "Absolute-pressure.mp3",
+    "file": "mc-qc-absolute-pressure.mp3"
+  },
+  "mc-qc-now-that-s-a-bass-drop": {
+    "source": "Now-that-s-a-bass-drop.mp3",
+    "file": "mc-qc-now-that-s-a-bass-drop.mp3"
+  },
+  "mc-qc-rewind": {
+    "source": "Rewind.mp3",
+    "file": "mc-qc-rewind.mp3"
+  },
+  "mc-qc-somebody-check-the-speakers": {
+    "source": "Somebody-check-the-speakers.mp3",
+    "file": "mc-qc-somebody-check-the-speakers.mp3"
+  },
+  "mc-qc-thats-how-we-do-it": {
+    "source": "Thats-how-we-do-it.mp3",
+    "file": "mc-qc-thats-how-we-do-it.mp3"
+  },
+  "mc-qc-underground-holds-strong": {
+    "source": "Underground-holds-strong.mp3",
+    "file": "mc-qc-underground-holds-strong.mp3"
+  },
+  "mc-qc-next-lot-bring-em": {
+    "source": "Next-lot-bring-em.mp3",
+    "file": "mc-qc-next-lot-bring-em.mp3"
+  },
+  "mc-qc-still-keepin-it-real": {
+    "source": "Still-keepin-it-real.mp3",
+    "file": "mc-qc-still-keepin-it-real.mp3"
   }
 }

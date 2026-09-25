@@ -1,0 +1,1 @@
+const fs=require('fs');let p='work/bouncer-runtime.js',s=fs.readFileSync(p,'utf8').replace("const w=60;ctx.fillStyle='#15202a';","ctx.fillStyle=a.tier==='gold'?'#ffdc71':'#e5dfcf';ctx.font='bold 10px monospace';ctx.textAlign='center';ctx.fillText(a.tier.toUpperCase()+' · '+a.hp,a.x,a.y-265);const w=60;ctx.fillStyle='#15202a';");fs.writeFileSync(p,s);

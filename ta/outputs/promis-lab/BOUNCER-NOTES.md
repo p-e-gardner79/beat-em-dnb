@@ -1,0 +1,18 @@
+# Bouncers and weapons
+
+White (110 HP), Green (145), Black (185), Gold (250). Wave rosters: corporate; corporate/white; corporate/white/green; corporate/green/black; corporate/black/gold. Later waves rotate unlocked tiers with a corporate enemy, never more than three active enemies. Black and Gold can use radial bursts after losing their weapons. Grabs have a visible wind-up, can miss or be interrupted, and release before slam recovery.
+
+Security baton: 8 successful hits, 23 damage. Gold baton: 12 hits, 31 damage and knockdown. J picks up/swaps when no enemy is within forward striking range; armed J attacks, K retains kicks. Knockdowns/defeat drop weapons with remaining durability. Misses consume none. Up to eight discarded weapons remain to limit clutter.
+
+Armed hero poses reuse each hero's existing punch frames with a timed baton attachment. Bouncers use six full-body sprites per tier with pose switching, recoil and slam timing. Existing impact/briefcase audio is reused for batons and bouncer blows. No new voices were invented.
+
+New cabinet and door debris replace code rectangles. Final generated files: enforcers.png and shop-props.png, generated with built-in image generation, alpha preserved. Runtime separates connected sprite silhouettes to avoid adjacent-cell clipping.
+
+Checks: tier ordering and 20-wave cap; all heroes pickup, attack and drop; enemy disarm; durability and miss preservation; nearby attack priority; grab interruption and slam damage; audio and MC regressions; opening syntax and heist checks. In-browser mixed-wave artwork/props checked without runtime errors.
+
+## Bouncer generation prompt
+Create game sprite atlas transparent background. Clean detailed late-1990s 16-bit arcade brawler pixels, restrained outlines, coherent anatomy. FOUR ROWS SIX COLUMNS exactly 24 separated full body sprites equally sized cells with ample padding. Same stocky adult bearded bouncer from references, shaved brown hair jeans brown work boots fingerless gloves black shirt bomber jacket. Row1 WHITE jacket weakest. Row2 olive GREEN jacket. Row3 BLACK jacket. Row4 shiny GOLD jacket. Each row EXACTLY six poses left to right: 1 ready idle facing RIGHT; 2 walking right LEFT foot forward; 3 walking right RIGHT foot forward opposite stride; 4 powerful extended punch right; 5 crouching forward two-handed grab/body-slam follow-through hands low; 6 lying knocked down horizontal on ground. All faces and proportions consistent, same body scale except horizontal fallen pose naturally wider. NO enemies held, no dust, no glow, no text, no borders, NO background. Feet not clipped. All 24 sprites isolated alpha transparent. Use references for character identity and jacket colors but use clean game-ready art.
+
+## Prop generation prompt
+Transparent game prop sprite atlas, 2 columns 2 rows equal cells, clean richly detailed 16-bit arcade pixel art matching 1995 London record shop, subdued outlines. Top left: full upright 1995 arcade cabinet three-quarter front view, dark plum black casing with illustrated neon jungle marquee, recessed cyan CRT with tiny pixel fighting game demo, joystick and buttons, angled control panel, coin slots, base and perspective feet. Top right: cluster of shattered wooden shop door debris lying flat on floor, irregular splintered planks exposed pale timber torn jagged ends small brass hinge, rich wood grain and tiny shadows, NO plain rectangular blocks. Bottom left: black security baton isolated horizontal, textured grip wrist loop steel end. Bottom right: same baton with gold metal bands and gold handle detailing. Each object separate contained in own cell generous transparent padding no text no extra items no floor or backdrop.
+

@@ -1,0 +1,126 @@
+{
+  "behind": [
+    {
+      "id": "mc-qc-behind-ya",
+      "text": "Behind ya!"
+    },
+    {
+      "id": "mc-qc-watch-your-back-selecta",
+      "text": "Watch your back, selecta!"
+    },
+    {
+      "id": "mc-qc-oi-other-shoulder",
+      "text": "Oi! Other shoulder!"
+    },
+    {
+      "id": "mc-qc-they-are-sneaking-up",
+      "text": "They’re sneaking up!"
+    }
+  ],
+  "space": [
+    {
+      "id": "mc-qc-find-some-space",
+      "text": "Find some space!"
+    },
+    {
+      "id": "mc-qc-dont-let-em-box-you-in",
+      "text": "Don’t let ’em box you in!"
+    },
+    {
+      "id": "mc-qc-work-your-way-out",
+      "text": "Work your way out!"
+    }
+  ],
+  "hit": [
+    {
+      "id": "mc-qc-solid",
+      "text": "Solid!"
+    },
+    {
+      "id": "mc-qc-what-a-connection",
+      "text": "What a connection!"
+    },
+    {
+      "id": "mc-qc-that-one-landed",
+      "text": "That one landed!"
+    },
+    {
+      "id": "mc-qc-heavy-business",
+      "text": "Heavy business!"
+    }
+  ],
+  "combo": [
+    {
+      "id": "mc-qc-keep-it-rollin",
+      "text": "Keep it rollin!"
+    },
+    {
+      "id": "mc-qc-thats-the-rythm",
+      "text": "That’s the rhythm!"
+    },
+    {
+      "id": "mc-qc-straight-into-the-next",
+      "text": "Straight into the next!"
+    }
+  ],
+  "down": [
+    {
+      "id": "mc-qc-mind-the-records",
+      "text": "Mind the records!"
+    },
+    {
+      "id": "mc-qc-take-a-seat-sunshine",
+      "text": "Take a seat sunshine!"
+    }
+  ],
+  "ready": [
+    {
+      "id": "mc-qc-your-special-is-ready",
+      "text": "Your special is ready!"
+    },
+    {
+      "id": "mc-qc-full-charge-make-it-count",
+      "text": "Full charge make it count!"
+    },
+    {
+      "id": "mc-qc-ready-to-drop-the-bass",
+      "text": "Ready to drop the bass!"
+    }
+  ],
+  "special": [
+    {
+      "id": "mc-qc-absolute-pressure",
+      "text": "Absolute pressure!"
+    },
+    {
+      "id": "mc-qc-now-that-s-a-bass-drop",
+      "text": "Now that’s a bass drop!"
+    },
+    {
+      "id": "mc-qc-rewind",
+      "text": "Rewind!"
+    },
+    {
+      "id": "mc-qc-somebody-check-the-speakers",
+      "text": "Somebody check the speakers!"
+    }
+  ],
+  "wave": [
+    {
+      "id": "mc-qc-thats-how-we-do-it",
+      "text": "That’s how we do it!"
+    },
+    {
+      "id": "mc-qc-underground-holds-strong",
+      "text": "Underground holds strong!"
+    },
+    {
+      "id": "mc-qc-next-lot-bring-em",
+      "text": "Next lot—bring ’em!"
+    },
+    {
+      "id": "mc-qc-still-keepin-it-real",
+      "text": "Still keepin it real!"
+    }
+  ]
+}

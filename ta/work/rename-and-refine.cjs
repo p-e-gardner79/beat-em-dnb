@@ -1,0 +1,6 @@
+const fs=require('fs');
+let p='work/build-combat.cjs',s=fs.readFileSync(p,'utf8');
+s=s.replace("const enemyLoader=",`html=html.replace('<title>PROMIS — Motion lab</title>',"<title>Drum n Bass Beat 'em up</title>").replace('<strong>PROMIS</strong>',"<strong>Drum n Bass Beat 'em up</strong>").replace('<span class="logo">P</span>','<span class="logo">D&amp;B</span>').replaceAll('PROMIS / PHIL','DJ PROMIS').replaceAll('Promis / Phil','DJ Promis').replaceAll('Promis health','DJ Promis health').replace('aria-label="Promis character','aria-label="DJ Promis character').replace('</style>', '.brand strong{font-size:clamp(18px,2.4vw,28px);letter-spacing:1px}.brand .logo{font-size:16px;flex-shrink:0}.brand{min-width:0}.edition{flex-shrink:0}@media(max-width:800px){.brand strong{font-size:19px;letter-spacing:.3px}} </style>');
+const enemyLoader=`).replace("'dj-change-clean.png'","'dj-change-adult-v3.png'");fs.writeFileSync(p,s);
+p='work/combat-runtime.js';s=fs.readFileSync(p,'utf8').replaceAll('PROMIS / PHIL','DJ PROMIS').replace("'Promis · alternating", "'DJ Promis · alternating");fs.writeFileSync(p,s);
+p='work/combat-engine.js';s=fs.readFileSync(p,'utf8').replace("'DJ Em':'Promis'","'DJ Em':'DJ Promis'");fs.writeFileSync(p,s);
