@@ -1,0 +1,10 @@
+const fs=require('fs');
+let s=fs.readFileSync('work/combat-engine.js','utf8');
+s=s.replaceAll('a.entering?-65:135','a.entering?(this.bounds?.left??135)-200:(this.bounds?.left??135)').replaceAll('a.entering?1025:825','a.entering?(this.bounds?.right??825)+200:(this.bounds?.right??825)');
+s=s.replaceAll('Math.max(135,Math.min(825,','Math.max(this.bounds?.left??135,Math.min(this.bounds?.right??825,');
+s=s.replace('Math.max(280,Math.min(435,','Math.max(this.lane?.[0]??280,Math.min(this.lane?.[1]??435,');
+s=s.replaceAll('e.x>=135&&e.x<=825','e.x>=(this.bounds?.left??135)&&e.x<=(this.bounds?.right??825)').replaceAll('e.x<135?1:-1','e.x<(this.bounds?.left??135)?1:-1');
+s=s.replace('x:155+Math.random()*650,y:290+Math.random()*135','x:(this.bounds?.left??135)+30+Math.random()*((this.bounds?.right??825)-(this.bounds?.left??135)-60),y:(this.lane?.[0]??280)+10+Math.random()*((this.lane?.[1]??435)-(this.lane?.[0]??280)-20)');
+s=s.replace('if(!this.over&&this.enemies.every','if(!this.campaignActive&&!this.over&&this.enemies.every');
+fs.writeFileSync('work/combat-engine.js',s);
+s=fs.readFileSync('work/bouncer-engine.js','utf8').replace('prototype.spawnWave=function(){','prototype.spawnWave=function(){if(this.campaignActive){this.enemies=[];this.waveDelay=null;return;}').replace('Math.max(135,Math.min(825,a.x))','Math.max(this.bounds?.left??135,Math.min(this.bounds?.right??825,a.x))');fs.writeFileSync('work/bouncer-engine.js',s);

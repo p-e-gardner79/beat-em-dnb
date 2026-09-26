@@ -1,0 +1,1 @@
+const fs=require('fs');let p='work/level-runtime.js',s=fs.readFileSync(p,'utf8').replace('drawCar(frame,x,y,w,0);opening=saved','drawCar(frame,x,y,w,frame>=4?6:0);opening=saved');fs.writeFileSync(p,s);
